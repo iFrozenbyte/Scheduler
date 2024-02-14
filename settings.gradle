@@ -1,0 +1,6 @@
+rootProject.name = 'sheduler'
+
+includeBuild("sheduler-server")
+includeBuild("sheduler-config")
+includeBuild("sheduler-gateway")
+//includeBuild("sheduler-category")
