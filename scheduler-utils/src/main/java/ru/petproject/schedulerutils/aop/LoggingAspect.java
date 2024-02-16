@@ -14,7 +14,7 @@ import org.springframework.util.StopWatch;
 public class LoggingAspect {
 
     //аспект будет выполняться для всех методов из пакета контроллеров
-    @Around("execution(* ru.petproject.schedulertasks.controllers..*(..)))")
+    @Around("execution(* ru.petproject.schedulertasks..controllers..*(..)))")
     public Object profileControllerMethods(ProceedingJoinPoint proceedingJoinPoint) throws Throwable
     {
 
@@ -35,6 +35,8 @@ public class LoggingAspect {
         countdown.stop();
 
         log.info("-------- Execution time of " + className + "." + methodName + " :: " + countdown.getTotalTimeMillis() + " ms");
+
+        System.out.println("ZZZ");
 
         return result;
     }
